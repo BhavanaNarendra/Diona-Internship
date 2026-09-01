@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Medical and Travel Expense Request">
+
+    <title>Medical & Travel Expense Request</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         CONTROL PANEL
+    ====================================== -->
+
+    <div class="controls">
+
+        <button
+            type="button"
+            onclick="loadDataset(0)">
+            Demo Data 1
+        </button>
+
+        <button
+            type="button"
+            onclick="loadDataset(1)">
+            Demo Data 2
+        </button>
+
+        <button
+            type="button"
+            onclick="window.print()">
+            Print / Save PDF
+        </button>
+
+    </div>
+
+
+    <!-- =====================================
+         MAIN REPORT
+    ====================================== -->
+
+    <main id="expenseReport"></main>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

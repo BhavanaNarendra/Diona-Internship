@@ -1,0 +1,427 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e6e8eb;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+
+/* =========================================
+   CONTROL BUTTONS
+========================================= */
+
+.controls {
+    width: 100%;
+    padding: 15px;
+    background: #1f2937;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.controls button {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1f2937;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: #dbeafe;
+}
+
+
+/* =========================================
+   A4 PAGE
+========================================= */
+
+.report-page {
+    width: 210mm;
+    min-height: 297mm;
+
+    margin: 25px auto;
+
+    padding: 16mm;
+
+    background: white;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+
+    position: relative;
+
+    page-break-after: always;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.report-header {
+    border-bottom: 2px solid #222;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.logo-area {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo-subtitle {
+    font-size: 10px;
+    color: #555;
+    margin-top: 3px;
+}
+
+.document-title {
+    text-align: right;
+}
+
+.document-title h1 {
+    margin: 0;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.document-title p {
+    margin: 5px 0 0;
+    font-size: 11px;
+    color: #555;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-bar {
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    font-size: 10px;
+    color: #444;
+}
+
+.contact-item {
+    margin-right: 10px;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+    margin-top: 16px;
+}
+
+.section-title {
+    background: #eeeeee;
+    border: 1px solid #999;
+
+    padding: 7px 9px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.section-description {
+    font-size: 10px;
+    color: #555;
+
+    margin: 7px 0;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   INFORMATION GRID
+========================================= */
+
+.field-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+}
+
+.field-grid.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.field {
+    min-height: 50px;
+
+    padding: 8px;
+
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.field-label {
+    font-size: 9px;
+
+    color: #555;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.field-value {
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   OPTIONS / CHECKBOX STYLE
+========================================= */
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 8px 0;
+}
+
+.option {
+    border: 1px solid #aaa;
+
+    padding: 6px 9px;
+
+    font-size: 10px;
+
+    background: #fff;
+}
+
+.option.selected {
+    background: #eeeeee;
+
+    border-color: #222;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PAIN SCALE
+========================================= */
+
+.pain-scale {
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 10px;
+}
+
+.pain-number {
+    width: 27px;
+    height: 27px;
+
+    border: 1px solid #888;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.pain-number.selected {
+    background: #222;
+    color: white;
+}
+
+
+/* =========================================
+   COMMENTS
+========================================= */
+
+.comment-box {
+    min-height: 65px;
+
+    border: 1px solid #aaa;
+
+    padding: 9px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CERTIFICATION
+========================================= */
+
+.certification {
+    font-size: 9.5px;
+
+    line-height: 1.55;
+
+    text-align: justify;
+
+    border: 1px solid #aaa;
+
+    padding: 10px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.report-footer {
+    margin-top: 20px;
+
+    border-top: 1px solid #999;
+
+    padding-top: 7px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    font-size: 8.5px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   PAGE NUMBER
+========================================= */
+
+.page-number {
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PRINT SETTINGS
+========================================= */
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .controls {
+        display: none;
+    }
+
+    .report-page {
+        width: 210mm;
+        min-height: 297mm;
+
+        margin: 0;
+
+        box-shadow: none;
+
+        page-break-after: always;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .report-page {
+        width: 95%;
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+    .header-top {
+        flex-direction: column;
+    }
+
+    .document-title {
+        text-align: left;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controls button {
+        width: 100%;
+    }
+
+    .field-grid,
+    .field-grid.three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .field.full {
+        grid-column: auto;
+    }
+
+    .contact-bar {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
